@@ -1,0 +1,5 @@
+{:jobs
+ {:kestrel
+  {"elasticsearch" {:interval 20
+                    :job-ns "cauchy.jobs.elasticsearch"
+                    :job-fn "elasticsearch-health"}}}}
