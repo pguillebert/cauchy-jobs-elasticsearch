@@ -70,8 +70,9 @@
       {:service "fielddata_evictions"
        :metric (get-in stats [:_all :total :fielddata :evictions])}
 
-      (map (fn [[k v]]
-             {:service (name k)
-              :metric v})
-           (dissoc health :status :cluster_name :timed_out))]))
+      {:service "active_shards" :metric active_shards}
+      {:service "unassigned_shards" :metric unassigned_shards}
+      {:service "relocating_shards" :metric relocating_shards}
+      {:service "initializing_shards" :metric active_primary_shards}
+      {:service "active_primary_shards" :metric active_primary_shards}]))
   ([] (elasticsearch-health {})))
