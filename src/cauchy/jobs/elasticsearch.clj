@@ -73,6 +73,6 @@
       {:service "active_shards" :metric active_shards}
       {:service "unassigned_shards" :metric unassigned_shards}
       {:service "relocating_shards" :metric relocating_shards}
-      {:service "initializing_shards" :metric active_primary_shards}
+      {:service "initializing_shards" :metric initializing_shards}
       {:service "active_primary_shards" :metric active_primary_shards}]))
   ([] (elasticsearch-health {})))
