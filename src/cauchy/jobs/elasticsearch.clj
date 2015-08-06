@@ -87,7 +87,12 @@
         {:service "indices.search.query_total" :metric (get-in node-stats [:indices :search :query_total])}
         {:service "indices.search.query_current" :metric (get-in node-stats [:indices :search :query_current])}
         {:service "indices.search.open_contexts" :metric (get-in node-stats [:indices :search :open_contexts])}
-        ;;Node jvm metrics
+        ;;Node jvm heap metrics
+        {:service "heap.used_bytes" :metric (get-in node-stats [:jvm :mem :heap_used_in_bytes])}
+        {:service "heap.used_pct" :metric (get-in node-stats [:jvm :mem :heap_used_percent])}
+        {:service "heap.max_bytes" :metric (get-in node-stats [:jvm :mem :heap_max_in_bytes])}
+        {:service "non_heap.used_bytes" :metric (get-in node-stats [:jvm :mem :non_heap_used_in_bytes])}
+        ;;Node jvm gc metrics
         {:service "gc.young.count" :metric (get-in node-stats [:jvm :gc :collectors :young :collection_count])}
         {:service "gc.young.collection_time_in_millis" :metric (get-in node-stats [:jvm :gc :collectors :young :collection_time_in_millis])}
         {:service "gc.old.count" :metric (get-in node-stats [:jvm :gc :collectors :old :collection_count])}
