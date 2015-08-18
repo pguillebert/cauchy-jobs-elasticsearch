@@ -1,4 +1,4 @@
-(defproject cauchy-jobs-elasticsearch "0.1.0"
+(defproject cauchy-jobs-elasticsearch "0.1.2"
   :description "Cauchy jobs to monitor Elasticsearch server"
   :url "https://github.com/pguillebert/cauchy-jobs-elasticsearch"
   :scm {:name "git"
